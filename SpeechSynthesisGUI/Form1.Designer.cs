@@ -40,8 +40,18 @@
             this.btn_OpenFileDialog = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.sfd_WAVOutput = new System.Windows.Forms.SaveFileDialog();
+            this.lbl_VoiceDetails = new System.Windows.Forms.Label();
+            this.lbl_VoiceSettings = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_Rate = new System.Windows.Forms.Label();
+            this.tkb_Rate = new System.Windows.Forms.TrackBar();
+            this.lbl_Volume = new System.Windows.Forms.Label();
+            this.tkb_Volume = new System.Windows.Forms.TrackBar();
             this.pnl_VoiceInfo.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tkb_Rate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkb_Volume)).BeginInit();
             this.SuspendLayout();
             // 
             // lbx_AllVoices
@@ -66,9 +76,9 @@
             // 
             this.pnl_VoiceInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_VoiceInfo.Controls.Add(this.lbl_VoiceInfo);
-            this.pnl_VoiceInfo.Location = new System.Drawing.Point(12, 218);
+            this.pnl_VoiceInfo.Location = new System.Drawing.Point(12, 230);
             this.pnl_VoiceInfo.Name = "pnl_VoiceInfo";
-            this.pnl_VoiceInfo.Size = new System.Drawing.Size(174, 220);
+            this.pnl_VoiceInfo.Size = new System.Drawing.Size(174, 203);
             this.pnl_VoiceInfo.TabIndex = 2;
             // 
             // lbl_VoiceInfo
@@ -98,7 +108,7 @@
             // 
             // btn_Preview
             // 
-            this.btn_Preview.Location = new System.Drawing.Point(195, 224);
+            this.btn_Preview.Location = new System.Drawing.Point(195, 352);
             this.btn_Preview.Name = "btn_Preview";
             this.btn_Preview.Size = new System.Drawing.Size(159, 23);
             this.btn_Preview.TabIndex = 5;
@@ -119,7 +129,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btn_OpenFileDialog);
             this.panel1.Controls.Add(this.lbl_Path);
-            this.panel1.Location = new System.Drawing.Point(195, 253);
+            this.panel1.Location = new System.Drawing.Point(195, 381);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 22);
             this.panel1.TabIndex = 7;
@@ -136,7 +146,7 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Location = new System.Drawing.Point(195, 282);
+            this.btn_Save.Location = new System.Drawing.Point(195, 410);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(159, 23);
             this.btn_Save.TabIndex = 8;
@@ -144,11 +154,80 @@
             this.btn_Save.UseVisualStyleBackColor = true;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
+            // lbl_VoiceDetails
+            // 
+            this.lbl_VoiceDetails.AutoSize = true;
+            this.lbl_VoiceDetails.Location = new System.Drawing.Point(12, 214);
+            this.lbl_VoiceDetails.Name = "lbl_VoiceDetails";
+            this.lbl_VoiceDetails.Size = new System.Drawing.Size(69, 13);
+            this.lbl_VoiceDetails.TabIndex = 9;
+            this.lbl_VoiceDetails.Text = "Voice Details";
+            // 
+            // lbl_VoiceSettings
+            // 
+            this.lbl_VoiceSettings.AutoSize = true;
+            this.lbl_VoiceSettings.Location = new System.Drawing.Point(189, 214);
+            this.lbl_VoiceSettings.Name = "lbl_VoiceSettings";
+            this.lbl_VoiceSettings.Size = new System.Drawing.Size(75, 13);
+            this.lbl_VoiceSettings.TabIndex = 10;
+            this.lbl_VoiceSettings.Text = "Voice Settings";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lbl_Volume);
+            this.panel2.Controls.Add(this.tkb_Volume);
+            this.panel2.Controls.Add(this.lbl_Rate);
+            this.panel2.Controls.Add(this.tkb_Rate);
+            this.panel2.Location = new System.Drawing.Point(192, 230);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(165, 115);
+            this.panel2.TabIndex = 11;
+            // 
+            // lbl_Rate
+            // 
+            this.lbl_Rate.AutoSize = true;
+            this.lbl_Rate.Location = new System.Drawing.Point(9, 4);
+            this.lbl_Rate.Name = "lbl_Rate";
+            this.lbl_Rate.Size = new System.Drawing.Size(30, 13);
+            this.lbl_Rate.TabIndex = 1;
+            this.lbl_Rate.Text = "Rate";
+            // 
+            // tkb_Rate
+            // 
+            this.tkb_Rate.Location = new System.Drawing.Point(2, 20);
+            this.tkb_Rate.Minimum = -10;
+            this.tkb_Rate.Name = "tkb_Rate";
+            this.tkb_Rate.Size = new System.Drawing.Size(156, 45);
+            this.tkb_Rate.TabIndex = 0;
+            // 
+            // lbl_Volume
+            // 
+            this.lbl_Volume.AutoSize = true;
+            this.lbl_Volume.Location = new System.Drawing.Point(10, 54);
+            this.lbl_Volume.Name = "lbl_Volume";
+            this.lbl_Volume.Size = new System.Drawing.Size(42, 13);
+            this.lbl_Volume.TabIndex = 3;
+            this.lbl_Volume.Text = "Volume";
+            // 
+            // tkb_Volume
+            // 
+            this.tkb_Volume.Location = new System.Drawing.Point(3, 70);
+            this.tkb_Volume.Maximum = 100;
+            this.tkb_Volume.Name = "tkb_Volume";
+            this.tkb_Volume.Size = new System.Drawing.Size(156, 45);
+            this.tkb_Volume.TabIndex = 2;
+            this.tkb_Volume.TickFrequency = 10;
+            this.tkb_Volume.Value = 100;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 450);
+            this.ClientSize = new System.Drawing.Size(368, 443);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.lbl_VoiceSettings);
+            this.Controls.Add(this.lbl_VoiceDetails);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Preview);
@@ -157,12 +236,17 @@
             this.Controls.Add(this.pnl_VoiceInfo);
             this.Controls.Add(this.lbl_AvailableVoices);
             this.Controls.Add(this.lbx_AllVoices);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnl_VoiceInfo.ResumeLayout(false);
             this.pnl_VoiceInfo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tkb_Rate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkb_Volume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +266,13 @@
         private System.Windows.Forms.Button btn_OpenFileDialog;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.SaveFileDialog sfd_WAVOutput;
+        private System.Windows.Forms.Label lbl_VoiceDetails;
+        private System.Windows.Forms.Label lbl_VoiceSettings;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TrackBar tkb_Rate;
+        private System.Windows.Forms.Label lbl_Rate;
+        private System.Windows.Forms.Label lbl_Volume;
+        private System.Windows.Forms.TrackBar tkb_Volume;
     }
 }
 

@@ -39,6 +39,8 @@ namespace SpeechSynthesisGUI
             synth.SpeakAsyncCancelAll();
             synth.SetOutputToDefaultAudioDevice();
             synth.SelectVoice(InstalledVoices[lbx_AllVoices.SelectedIndex].VoiceInfo.Name);
+            synth.Volume = tkb_Volume.Value;
+            synth.Rate = tkb_Rate.Value;
             synth.SpeakAsync(tbx_InputText.Text);
             
         }
@@ -47,6 +49,9 @@ namespace SpeechSynthesisGUI
         {
             synth.SpeakAsyncCancelAll();
             synth.SetOutputToWaveFile(sfd_WAVOutput.FileName);
+            synth.SelectVoice(InstalledVoices[lbx_AllVoices.SelectedIndex].VoiceInfo.Name);
+            synth.Volume = tkb_Volume.Value;
+            synth.Rate = tkb_Rate.Value;
             synth.SpeakAsync(tbx_InputText.Text);
         }
 
